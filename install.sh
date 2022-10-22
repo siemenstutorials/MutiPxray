@@ -34,7 +34,7 @@ systemctl enable xray
 #Xray Configuration 
 mkdir -p /etc/xray
 echo -n "" > /etc/xray/serve.toml
-for ((i = 0; i < ${#ips [@]}; i++)); do
+for ((i = 0; i < ${#ips[@]}; i++)); do
 cat <<EOF > /etc/xray/serve.toml 
 [[inbounds]]
 listen = "${ips [i]}"
