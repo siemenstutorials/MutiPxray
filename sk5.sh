@@ -108,11 +108,6 @@ port_exist_check() {
     fi
 }
 
-bbr_install() {
-    [ -f "tcp.sh" ] && rm -rf ./tcp.sh
-    wget -O tcp.sh --no-check-certificate "https://raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
-
-}
 
 user_set() {
 	read -rp  "请设置ss5账户。默认:admin）:" user
@@ -259,8 +254,7 @@ menu() {
     echo -e "${Green}2.${Font}  停止Socks5"
     echo -e "${Green}3.${Font}  卸载Socks5"
     echo -e "${Green}4.${Font}  更改端口账户密码"
-#    echo -e "${Green}5.${Font}  install BBR"
-    echo -e "${Green}99.${Font}  退出 \n"
+    echo -e "${Green}5.${Font}  退出 \n"
 
 
 
@@ -280,9 +274,6 @@ menu() {
         update_ss5
         ;;
     5)
-        bbr_install
-        ;;
-    99)
         exit 0
         ;;
     *)
