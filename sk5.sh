@@ -245,10 +245,9 @@ update_ss5() {
 
 
 menu() {
-    echo -e "\t ss5 安装管理脚本 "
+    echo -e "\t---Socks5 安装管理脚本---"
     echo -e "\t---authored by SiemensTutorials---"
-    echo -e "\tSystem Request:Debian 9+/Ubuntu 20.04+/Centos 7+"
-
+    echo -e "\t---System Request:Debian 9+/Ubuntu 20.04+/Centos 7+---"
     echo -e "—————————————— 安装向导 ——————————————"
     echo -e "${Green}1.${Font}  安装Socks5"
     echo -e "${Green}2.${Font}  停止Socks5"
