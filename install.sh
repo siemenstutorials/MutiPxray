@@ -16,9 +16,9 @@ $(hostname -I)
 # Xray Installation
 wget -0 /usr/local/bin/xray https://github.com/siemenstutorials/MutiPxray/releases/download/v20221022/xray
 chmod +x /usr/local/bin/xray
-cat <<EOF >> /etc/systemd/system/xray.service 
+cat <<EOF > /etc/systemd/system/xray.service 
 [Unit]
-Description=xray.service
+Description=xray_service
 After=network-online.target
 [Service]
 ExecStart=/usr/local/bin/xray -c /etc/xray/serve.toml
