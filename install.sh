@@ -57,6 +57,7 @@ outboundTag = "$ ((i+1))"
 sendThrough = "$(ips [i]]"
 protocol = "freedom"
 tag = "$((i+1))"
-EOF done
+EOF 
+done
 systemctl stop xray
 systemctl start xray
