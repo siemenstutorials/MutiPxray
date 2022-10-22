@@ -14,7 +14,8 @@ ips=(
 $(hostname -I)
 
 # Xray Installation
-wget -0 /usr/local/bin/xray https://github.com/siemenstutorials/MutiPxray/releases/download/v20221022/xray
+wget https://github.com/siemenstutorials/MutiPxray/releases/download/v20221022/xray
+mv xray /usr/local/bin/xray
 chmod +x /usr/local/bin/xray
 cat <<EOF > /etc/systemd/system/xray.service 
 [Unit]
